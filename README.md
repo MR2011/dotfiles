@@ -11,5 +11,6 @@ I use a [bare git repository](https://www.atlassian.com/git/tutorials/dotfiles) 
 * [Dunst](https://dunst-project.org/)
 * [Compton](https://github.com/chjj/compton)
 * [XOrg](https://www.x.org/wiki/)
+* [sxhkd](https://github.com/baskerville/sxhkd)
 
 
