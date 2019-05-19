@@ -1,0 +1,48 @@
+# Open Terminal
+super + Return
+	st
+# Open Terminal in specific path
+super + shift + Return
+	~/scripts/new_terminal.sh
+# Application launcher
+super + space
+	dmenu_run
+# Take screenshot
+super + p
+	flameshot gui -p ~/pictures/screenshots
+
+# Open Applications
+super + o ; {b,e,s,p}
+	{firefox,thunderbird,spotify,keepassxc}
+# Shutdown
+super + shift + p
+	poweroff
+# Mount USB
+super +  m
+	sudo ~/scripts/mount.sh
+# Unmount USB
+super + shift + m
+	sudo ~/scripts/umount.sh
+# Increase Volume
+XF86AudioRaiseVolume
+	pactl set-sink-volume 2 +5%
+# Decrease Volume
+XF86AudioLowerVolume
+	pactl set-sink-volume 2 -5%
+# Mute/Unmute Volume
+XF86AudioMute
+	pactl set-sink-mute 2 toggle
+# Play/Pause track
+XF86AudioPlay
+	playerctl play-pause
+# Stop track
+XF86AudioStop
+	playerctl stop
+# Next track
+XF86AudioNext
+	playerctl next
+# Previous track
+XF86AudioPrev
+	playerctl previous
+
+
