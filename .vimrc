@@ -34,6 +34,7 @@ set noswapfile
 set t_Co=256 
 set splitright
 set splitbelow
+set omnifunc=syntaxcomplete#Complete
 " Search highlight color
 hi Search cterm=NONE ctermfg=grey ctermbg=green
 
