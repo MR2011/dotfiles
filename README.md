@@ -9,7 +9,7 @@ I use a [bare git repository](https://www.atlassian.com/git/tutorials/dotfiles) 
 * Bash
 * [ncmpcpp](https://rybczak.net/ncmpcpp/)
 * [Dunst](https://dunst-project.org/)
-* [Compton](https://github.com/chjj/compton)
+* [xcompmgr](https://cgit.freedesktop.org/xorg/app/xcompmgr/)
 * [XOrg](https://www.x.org/wiki/)
 * [sxhkd](https://github.com/baskerville/sxhkd)
 
