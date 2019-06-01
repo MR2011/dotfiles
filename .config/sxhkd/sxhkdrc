@@ -3,10 +3,10 @@ super + Return
 	st
 # Open Terminal in specific path
 super + shift + Return
-	~/scripts/new_terminal.sh
+	otcwd
 # Application launcher
 super + space
-	dmenu_run
+	dmenurc
 # Take screenshot
 super + p
 	flameshot gui -p ~/pictures/screenshots
@@ -19,19 +19,19 @@ super + shift + o
 	poweroff
 # Mount USB
 super +  m
-	sudo ~/scripts/mount.sh
+	sudo musb
 # Unmount USB
 super + shift + m
-	sudo ~/scripts/umount.sh
+	sudo umusb
 # Increase Volume
 XF86AudioRaiseVolume
-	pactl set-sink-volume 1 +5%
+	amixer -q set Master 5%+
 # Decrease Volume
 XF86AudioLowerVolume
-	pactl set-sink-volume 1 -5%
+	amixer -q set Master 5%-
 # Mute/Unmute Volume
 XF86AudioMute
-	pactl set-sink-mute 1 toggle
+	amixer -q set Master toggle
 # Play/Pause track
 XF86AudioPlay
 	playerctl play-pause

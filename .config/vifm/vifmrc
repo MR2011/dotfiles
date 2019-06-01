@@ -380,7 +380,7 @@ nnoremap gw :cd ~/pictures/wallpapers<cr>
 nnoremap gc :cd ~/.config<cr>
 
 " Set new background and colorscheme
-nnoremap bg :!sh -xc 'wal -i %f -o reload_dunst.sh'<cr>
+nnoremap bg :!sh -xc 'wal -i %f -o reload_dunst.sh && pkill dwm && dwm_status &'<cr>
 " Start shell in current directory
 nnoremap s :shell<cr>
 
