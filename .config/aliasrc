@@ -1,0 +1,29 @@
+alias vimrc="nvim ~/.vimrc"
+alias i3config="nvim ~/.config/i3/config"
+alias xresource="nvim ~/.Xresources"
+alias xinitrc="nvim ~/.xinitrc"
+alias bashrc="nvim ~/.bashrc"
+alias bashrc_reload="source ~/.bashrc"
+alias fishconfig="nvim ~/.config/fish/config.fish"
+
+alias fm="~/.config/vifm/scripts/vifmrun"
+alias vifmimg="~/.config/vifm/scripts/vifmimg"
+alias vim="nvim"
+alias ..="cd .."
+alias dev="cd ~/development"
+alias music="cd /media/200gb/Eigene\ Musik"
+alias ls="ls --color=auto"
+
+#directory Aliases
+alias ..="cd .."
+alias thesis="cd ~/documents/thesis"
+alias dev="cd ~/development"
+alias music="cd /media/200gb/Eigene\ Musik"
+
+alias reboot="sudo systemctl reboot"
+alias poweroff="sudo systemctl poweroff"
+alias halt="sudo systemctl halt"
+alias steam="flatpak run com.valvesoftware.Steam"
+alias youtube-split="~/development/youtube-split/youtube-split.sh"
+alias config="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
+
