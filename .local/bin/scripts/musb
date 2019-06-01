@@ -1,0 +1,17 @@
+#!/bin/sh
+# Get the mountable drives
+mountable=$(lsblk -lp | grep -E "(part|rom)\s*$" | grep -v "sda" | awk '{print $1, "(" $4 ")"}')
+# Exit if none were found
+[[ "$mountable" = "" ]] && exit 1
+# Choose a drive to mount
+chosen=$(echo "$mountable" | dmenuc -i -p "Mount which drive?" | awk '{print $1}')
+# Exit if none were chosen
+[[ "$chosen" = "" ]] && exit 1
+# Get mountpoints
+dirs=$(find /mnt -type d 2>/dev/null)
+# Select mountpoint
+mountpoint=$(echo "$dirs" | dmenuc -i -p "Type in mount point.")
+# Exit if none was chosen
+[[ "$mountpoint" = "" ]] && exit 1
+# Mount drive
+sudo mount $chosen $mountpoint

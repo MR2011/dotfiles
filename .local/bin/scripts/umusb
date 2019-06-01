@@ -1,0 +1,13 @@
+#!/bin/sh
+# Ignore the following mounted devices
+exclusionregex="(/boot|/home|/)$"
+# Choose a drive to unmount
+drives=$(lsblk -lp | grep -E "(part|rom)\s*/" | grep -vE "$exclusionregex" | awk '{print $1, "(" $4 ")", "on", $7}')
+# Exit if no drives are mounted 
+[[ "$drives" = "" ]] && exit 1
+# Choose drive to unmount
+chosen=$(echo "$drives" | dmenuc -i -p "Unmount which drive?" | awk '{print $1}')
+# Exit if no drive was selected
+[[ "$chosen" = "" ]] && exit 1
+# Unmount drive
+sudo umount $chosen

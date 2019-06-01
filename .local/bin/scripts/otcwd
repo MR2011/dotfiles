@@ -1,0 +1,10 @@
+#!/bin/sh
+choose_from_cwds() {
+    for PROCID in $(pgrep '^bash$'); do
+	readlink -e /proc/$PROCID/cwd
+    done | sort -u | dmenuc -l 30 
+}
+path=$(choose_from_cwds)
+[[ "$path" = "" ]] && exit 1
+st $SHELL -c "cd $path; $SHELL" & 
+

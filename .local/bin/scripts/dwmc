@@ -1,0 +1,3 @@
+#!/bin/sh
+. "$HOME/.cache/wal/colors.sh"
+dwm -nbg "$color0" -nfg "$color7" -nb "$color8" -sfg "$color7" -sbg "$color2" -sb "$color7"
