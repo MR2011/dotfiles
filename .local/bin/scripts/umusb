@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Ignore the following mounted devices
 exclusionregex="(/boot|/home|/)$"
 # Choose a drive to unmount

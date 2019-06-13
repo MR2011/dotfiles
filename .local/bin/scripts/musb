@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Get the mountable drives
 mountable=$(lsblk -lp | grep -E "(part|rom)\s*$" | grep -v "sda" | awk '{print $1, "(" $4 ")"}')
 # Exit if none were found
