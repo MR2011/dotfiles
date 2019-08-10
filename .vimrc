@@ -67,6 +67,15 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+" Move lines
+nnoremap <leader>j :m .+1<CR>==
+nnoremap <leader>k :m .-2<CR>==
+inoremap <leader>j <Esc>:m .+1<CR>==gi
+inoremap <leader>k <Esc>:m .-2<CR>==gi
+vnoremap <leader>j :m '>+1<CR>gv=gv
+vnoremap <leader>k :m '<-2<CR>gv=gv
+
 " NERDTree split
 let NERDTreeMapPreviewVSplit='v'
 let NERDTreeMapPreviewSplit='h'
@@ -79,3 +88,5 @@ endif
 
 let g:airline_symbols.linenr = ''
 let g:airline_symbols.maxlinenr = ''
+" set tabsize for html files
+autocmd FileType html setlocal ts=2 sts=2 sw=2
