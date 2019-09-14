@@ -12,8 +12,8 @@ super + p
 	flameshot gui -p ~/pictures/screenshots
 
 # Open Applications
-super + o ; {b,e,s,p}
-	{firefox,thunderbird,spotify,keepassxc}
+super + o ; {b,c,e,s,p}
+	{firefox,edcfg,thunderbird,spotify,keepassxc}
 # Shutdown
 super + shift + o
 	poweroff

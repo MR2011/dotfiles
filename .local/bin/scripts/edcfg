@@ -1,0 +1,46 @@
+#!/bin/bash
+options="bash
+vim
+xinit
+xresources
+alias
+sxhkd
+dwm
+st
+i3
+fish"
+
+choice=$(echo "$options" | dmenuc -i -p "Edit a config file: ")
+
+case $choice in
+    'bash')
+	exec st -e nvim $HOME/.bashrc
+	;;
+    'vim')
+	exec st -e nvim $HOME/.vimrc
+	;;
+    'xinit')
+	exec st -e nvim $HOME/.xinitrc
+	;;
+    'xresources')
+	exec st -e nvim $HOME/.Xresources
+	;;
+    'alias')
+	exec st -e nvim $HOME/.config/aliasrc
+	;;
+    'sxhkd')
+	exec st -e nvim $HOME/.config/sxhkd/sxhkdrc
+	;;
+    'dwm')
+	exec st -e nvim $HOME/.config/dwm/config.def.h
+	;;
+    'st')
+	exec st -e nvim $HOME/st/config.def.h
+	;;
+    'i3')
+	exec st -e nvim $HOME/.config/i3/config
+	;;
+    'fish')
+	exec st -e nvim $HOME/.config/fish/config.fish
+	;;
+esac
