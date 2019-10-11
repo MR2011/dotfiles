@@ -3,7 +3,7 @@
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
-set shell=/usr/bin/bash
+set shell=/usr/bin/zsh
 
 " vundle plugins
 call vundle#begin()
@@ -16,6 +16,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'dylanaraps/wal.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat' "for vim surround
+" Languages
+Plugin 'rust-lang/rust.vim'
 call vundle#end()
 
 " basic configuration
@@ -52,15 +54,11 @@ nmap <leader>o :CtrlP <CR>
 nmap <leader>t :tabnew <CR>
 "cycling tabs
 nmap <tab> :tabnext <CR>
-nmap <S-tab> :tabp <CR>
-" copy and paste
-nmap <leader>c yy
-nmap <leader>v p
-"cut
-nmap <leader>x dd
 " cannot use j and k in wrapped lines (for example in long latex lines)
 map j gj
 map k gk
+" indent whole file
+nmap <leader>f gg=G
 
 " Easier split navigations
 nnoremap <C-J> <C-W><C-J>
@@ -88,3 +86,6 @@ let g:airline_symbols.linenr = ''
 let g:airline_symbols.maxlinenr = ''
 " set tabsize for html files
 autocmd FileType html setlocal ts=2 sts=2 sw=2
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2
+autocmd FileType ruby setlocal ts=2 sts=2 sw=2
+autocmd FileType eruby setlocal ts=2 sts=2 sw=2
