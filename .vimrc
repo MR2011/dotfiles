@@ -1,5 +1,5 @@
 filetype off
-set shell=/usr/bin/zsh
+set shell=$SHELL
 
 call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
