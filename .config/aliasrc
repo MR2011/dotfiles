@@ -13,12 +13,14 @@ alias ..="cd .."
 alias dev="cd ~/development"
 alias music="cd /media/200gb/Eigene\ Musik"
 alias ls="ls --color=auto"
+alias ll="ls -l"
 
 #directory Aliases
 alias ..="cd .."
 alias thesis="cd ~/documents/thesis"
 alias dev="cd ~/development"
 alias music="cd /media/200gb/Eigene\ Musik"
+alias devbox="cd /media/1tb/vm/devbox"
 
 alias reboot="sudo systemctl reboot"
 alias poweroff="sudo systemctl poweroff"
