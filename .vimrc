@@ -30,7 +30,8 @@ set omnifunc=syntaxcomplete#Complete
 " Search highlight color
 hi Search cterm=NONE ctermfg=grey ctermbg=green
 " Disable comment on new line
-set formatoptions-=cro
+autocmd FileType * set formatoptions-=cro
+
 
 " Code Folding
 set foldmethod=indent
