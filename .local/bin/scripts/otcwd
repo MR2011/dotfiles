@@ -1,6 +1,7 @@
 #!/bin/sh
+shell=`basename $SHELL`
 choose_from_cwds() {
-    for PROCID in $(pgrep '^bash$'); do
+    for PROCID in $(pgrep "^$shell$"); do
 	readlink -e /proc/$PROCID/cwd
     done | sort -u | dmenuc -l 30 
 }
