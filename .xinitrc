@@ -10,6 +10,8 @@ xcompmgr &  # Composite manager for transparenc
 slstatus &
 WALLPAPER=$(find ~/pictures/wallpapers/ -type f | shuf --random-source=/dev/urandom -n 1)
 wal -i $WALLPAPER 
+# map capslock to ESC
+setxkbmap -option caps:escape
 while :; do
     ssh-agent dwmc
 done
