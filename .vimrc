@@ -16,7 +16,6 @@ call plug#end()
 colorscheme wal
 set number
 set relativenumber
-set spell
 set ic
 set tabstop=8
 set softtabstop=4
@@ -30,6 +29,8 @@ set splitbelow
 set omnifunc=syntaxcomplete#Complete
 " Search highlight color
 hi Search cterm=NONE ctermfg=grey ctermbg=green
+" Disable comment on new line
+set formatoptions-=cro
 
 " Code Folding
 set foldmethod=indent
