@@ -1,31 +1,22 @@
-" syntax on
-"required for vundle
-set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
 set shell=/usr/bin/zsh
 
-" vundle plugins
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'kien/ctrlp.vim'
-Plugin 'tpope/vim-commentary'
-Plugin 'scrooloose/nerdtree'
-Plugin 'dylanaraps/wal.vim'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-repeat' "for vim surround
-" Languages
-Plugin 'rust-lang/rust.vim'
-call vundle#end()
+call plug#begin('~/.vim/plugged')
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'kien/ctrlp.vim'
+Plug 'tpope/vim-commentary'
+Plug 'scrooloose/nerdtree'
+Plug 'dylanaraps/wal.vim'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat' "for vim surround
+call plug#end()
 
 " basic configuration
 colorscheme wal
 set number
 set relativenumber
 set spell
-filetype plugin indent on " required for vundle
 set ic
 set tabstop=8
 set softtabstop=4
