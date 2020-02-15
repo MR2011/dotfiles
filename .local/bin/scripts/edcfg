@@ -1,5 +1,5 @@
 #!/bin/bash
-options="bash
+options="zsh
 vim
 xinit
 xresources
@@ -8,11 +8,15 @@ sxhkd
 dwm
 st
 i3
+bash
 fish"
 
 choice=$(echo "$options" | dmenuc -i -p "Edit a config file: ")
 
 case $choice in
+    'zsh')
+	exec st -e nvim $HOME/.zshrc
+	;;
     'bash')
 	exec st -e nvim $HOME/.bashrc
 	;;
