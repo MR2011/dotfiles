@@ -18,6 +18,7 @@ colorscheme wal
 set number
 set relativenumber
 set ic
+set hidden
 set tabstop=8
 set softtabstop=4
 set shiftwidth=4
@@ -47,7 +48,9 @@ nmap <leader>o :CtrlP <CR>
 "add new tab 
 nmap <leader>t :tabnew <CR>
 "cycling tabs
-nmap <tab> :tabnext <CR>
+nmap <S-tab> :tabnext <CR>
+"cycling buffers
+nmap <tab> :bnext <CR>
 " cannot use j and k in wrapped lines (for example in long latex lines)
 map j gj
 map k gk
