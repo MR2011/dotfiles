@@ -10,6 +10,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'dylanaraps/wal.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat' "for vim surround
+Plug 'michaeljsmith/vim-indent-object'
 call plug#end()
 
 " basic configuration
