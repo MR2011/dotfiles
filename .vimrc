@@ -6,7 +6,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-commentary'
-Plug 'scrooloose/nerdtree'
 Plug 'dylanaraps/wal.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat' "for vim surround
@@ -41,10 +40,10 @@ set nofoldenable
 
 " Mapping
 let mapleader=" " " use space bar as leader
-"NERDtree toggle
-map <leader>a :NERDTreeToggle <CR>
 "ctrlP plugin
 nmap <leader>o :CtrlP <CR>
+" netrw file manager
+nmap <leader>e :Explore <CR>
 "add new tab 
 nmap <leader>t :tabnew <CR>
 "cycling tabs
@@ -72,9 +71,9 @@ vnoremap <leader>k :m '<-2<CR>gv=gv
 " CTRLP
 let g:ctrlp_clear_cache_on_exit = 0
 
-" NERDTree split
-let NERDTreeMapPreviewVSplit='v'
-let NERDTreeMapPreviewSplit='h'
+" netrw file manager
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
 
 " airline configuration
 let g:airline_powerline_fonts = 1
