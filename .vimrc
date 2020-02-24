@@ -4,7 +4,7 @@ set shell=$SHELL
 call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-commentary'
 Plug 'scrooloose/nerdtree'
 Plug 'dylanaraps/wal.vim'
@@ -64,6 +64,9 @@ nnoremap <leader>j :m .+1<CR>==
 nnoremap <leader>k :m .-2<CR>==
 vnoremap <leader>j :m '>+1<CR>gv=gv
 vnoremap <leader>k :m '<-2<CR>gv=gv
+
+" CTRLP
+let g:ctrlp_clear_cache_on_exit = 0
 
 " NERDTree split
 let NERDTreeMapPreviewVSplit='v'
