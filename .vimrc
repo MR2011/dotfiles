@@ -56,6 +56,8 @@ map j gj
 map k gk
 " indent whole file
 nmap <leader>f gg=G
+" Toggle 80 character limit column
+noremap <leader>8 :execute "set cc=" . (&cc == "" ? "80" : "")<CR>
 
 " Easier split navigations
 nnoremap <C-J> <C-W><C-J>
