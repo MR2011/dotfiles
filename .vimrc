@@ -10,6 +10,7 @@ Plug 'dylanaraps/wal.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat' "for vim surround
 Plug 'michaeljsmith/vim-indent-object'
+Plug 'dense-analysis/ale'
 call plug#end()
 
 " basic configuration
@@ -74,6 +75,23 @@ let g:ctrlp_clear_cache_on_exit = 0
 " netrw file manager
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
+
+" ALE
+let g:ale_linters = {
+\    'python': ['flake8'],
+\}
+
+let g:ale_fixers = {
+\   'python': ['black'],
+\   'rust': ['rustfmt'],
+\}
+
+let g:ale_python_black_options = '--line-length 79'
+" Run linters only on file save
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_insert_leave = 0
+" Only run linters named in ale_linters settings.
+let g:ale_linters_explicit = 1
 
 " airline configuration
 let g:airline_powerline_fonts = 1
