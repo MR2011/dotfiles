@@ -57,6 +57,9 @@ map k gk
 nmap <leader>f gg=G
 " Toggle 80 character limit column
 noremap <leader>8 :execute "set cc=" . (&cc == "" ? "80" : "")<CR>
+" After yanking in visual mode, place the cursor at the end of the selection
+vmap y ygv<Esc>
+
 
 " Easier split navigations
 nnoremap <C-J> <C-W><C-J>
