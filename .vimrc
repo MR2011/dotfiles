@@ -71,7 +71,7 @@ vnoremap <leader>j :m '>+1<CR>gv=gv
 vnoremap <leader>k :m '<-2<CR>gv=gv
 
 " CTRLP
-set g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
+let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
 
 " netrw file manager
 let g:netrw_banner = 0
