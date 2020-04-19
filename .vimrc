@@ -47,10 +47,9 @@ nmap <leader>o :CtrlP <CR>
 nmap <leader>e :Explore <CR>
 "add new tab 
 nmap <leader>t :tabnew <CR>
-"cycling tabs
-nmap <S-tab> :tabnext <CR>
 "cycling buffers
 nmap <tab> :bnext <CR>
+nmap <S-tab> :bprev <CR>
 " cannot use j and k in wrapped lines (for example in long latex lines)
 map j gj
 map k gk
