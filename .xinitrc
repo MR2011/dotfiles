@@ -12,6 +12,8 @@ WALLPAPER=$(find ~/pictures/wallpapers/ -type f | shuf --random-source=/dev/uran
 wal -i $WALLPAPER 
 # map capslock to ESC
 setxkbmap -option caps:escape
+# set keyboard layout
+setxkbmap -layout us -variant altgr-intl -option nodeadkeys
 while :; do
     ssh-agent dwmc
 done
