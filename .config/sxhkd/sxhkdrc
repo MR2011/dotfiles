@@ -9,7 +9,7 @@ super + space
 	dmenurc
 # Take screenshot
 super + p
-	flameshot gui -p ~/pictures/screenshots
+	maim -s ~/pictures/screenshots/$(date +%s).png
 
 # Open Applications
 super + o ; {b,c,e,s,p}
@@ -18,11 +18,11 @@ super + o ; {b,c,e,s,p}
 super + shift + o
 	poweroff
 # Mount USB
-super +  m
-	sudo musb
+super + m
+	musb
 # Unmount USB
 super + shift + m
-	sudo umusb
+	umusb
 # Increase Volume
 XF86AudioRaiseVolume
 	amixer -q set Master 5%+
