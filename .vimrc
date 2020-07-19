@@ -11,6 +11,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat' "for vim surround
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'dense-analysis/ale'
+Plug 'vimwiki/vimwiki'
 call plug#end()
 
 " basic configuration
@@ -72,6 +73,12 @@ nnoremap <leader>j :m .+1<CR>==
 nnoremap <leader>k :m .-2<CR>==
 vnoremap <leader>j :m '>+1<CR>gv=gv
 vnoremap <leader>k :m '<-2<CR>gv=gv
+
+" Vimwiki
+let g:vimwiki_list = [{'path': '~/vimwiki/',	
+			      \ 'links_space_char': '_',	
+	                      \ 'syntax': 'markdown', 'ext': '.md'}]	
+autocmd BufWritePost ~/vimwiki/*.md silent !~/vimwiki/convert.sh
 
 " CTRLP
 let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
