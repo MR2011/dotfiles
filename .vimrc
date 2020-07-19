@@ -47,10 +47,9 @@ nmap <leader>o :CtrlP <CR>
 nmap <leader>e :Explore <CR>
 "add new tab 
 nmap <leader>t :tabnew <CR>
-"cycling tabs
-nmap <S-tab> :tabnext <CR>
 "cycling buffers
 nmap <tab> :bnext <CR>
+nmap <S-tab> :bprev <CR>
 " cannot use j and k in wrapped lines (for example in long latex lines)
 map j gj
 map k gk
@@ -58,6 +57,9 @@ map k gk
 nmap <leader>f gg=G
 " Toggle 80 character limit column
 noremap <leader>8 :execute "set cc=" . (&cc == "" ? "80" : "")<CR>
+" After yanking in visual mode, place the cursor at the end of the selection
+vmap y ygv<Esc>
+
 
 " Easier split navigations
 nnoremap <C-J> <C-W><C-J>
@@ -72,7 +74,7 @@ vnoremap <leader>j :m '>+1<CR>gv=gv
 vnoremap <leader>k :m '<-2<CR>gv=gv
 
 " CTRLP
-let g:ctrlp_clear_cache_on_exit = 0
+let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
 
 " netrw file manager
 let g:netrw_banner = 0
