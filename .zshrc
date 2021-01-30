@@ -43,3 +43,6 @@ zle -N zle-keymap-select
 # For FZF
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
+
+# LF Icons
+source ~/.config/lf/icons
