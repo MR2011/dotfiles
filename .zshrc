@@ -46,3 +46,7 @@ source /usr/share/fzf/completion.zsh
 
 # LF Icons
 source ~/.config/lf/icons
+
+# Env Variables
+export EDITOR="nvim"
+export SHELL="zsh"
