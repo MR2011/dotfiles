@@ -15,9 +15,21 @@ map o &mimeopen $f		# dedicated keys for file opener actions
 map O $mimeopen --ask $f
 map bg :background
 map B $vidir
+map f $xdg-open $(fzf)
+map <c-f> :fzf_jump
 
 
 # Functions
+cmd fzf_jump ${{
+    res="$(find . -maxdepth 1 | fzf --reverse --header='Jump to location' | sed 's/\\/\\\\/g;s/"/\\"/g')"
+    if [ -d "$res" ]; then
+        cmd="cd"
+    else 
+        cmd="select"                                                       
+    fi
+    lf -remote "send $id $cmd \"$res\""
+}}
+
 cmd background ${{
     wal -i $f -o reload_dunst.sh
 }}
