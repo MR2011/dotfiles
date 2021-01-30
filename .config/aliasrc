@@ -7,6 +7,7 @@ alias bashrc_reload="source ~/.bashrc"
 alias fishconfig="nvim ~/.config/fish/config.fish"
 
 alias fm="~/.config/vifm/scripts/vifmrun"
+alias lf="~/.config/lf/lfrun"
 alias vifmimg="~/.config/vifm/scripts/vifmimg"
 alias vim="nvim"
 alias ..="cd .."
