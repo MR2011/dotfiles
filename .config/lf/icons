@@ -1,11 +1,10 @@
 # AUR nerd-fonts-hack 
-export LF_ICONS="\
+export LF_ICONS="di=:\
 ow=:\
 st=:\
 tw=:\
 dt=:\
-di=:\
-fi=:\  
+fi=:\
 ln=:\
 or=:\
 ex=:\
