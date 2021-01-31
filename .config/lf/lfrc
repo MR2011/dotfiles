@@ -17,6 +17,7 @@ map bg :background
 map B $vidir
 map f $xdg-open $(fzf)
 map <c-f> :fzf_jump
+map D :delete
 
 # Functions
 cmd fzf_jump ${{
@@ -67,6 +68,13 @@ cmd zip ${{
     cp -r $fx $1
     zip -r $1.zip $1
     rm -rf $1
+}}
+
+cmd delete %{{
+    printf "$fx delete?[y/N]"
+    read ans
+    [ $ans = "y" ] && rm -rf -- $fx
+    clear
 }}
 
 # Bookmarks
