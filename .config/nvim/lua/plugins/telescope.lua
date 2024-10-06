@@ -20,7 +20,8 @@ return {
             { "<leader><space>", require("telescope.builtin").find_files, desc = "Find Files (Root Dir)" },
             { "<leader>ff", require("telescope.builtin").find_files, desc = "Find Files (Root Dir)", { root = true } },
             { "<leader>fF", require("telescope.builtin").find_files, desc = "Find Files (CWD)", { root = false } },
-            { "<leader>fg", require("telescope.builtin").live_group, desc = "Find in Buffer", { root = false } },
+            { "<leader>fg", require("telescope.builtin").live_grep, desc = "Search for string  (CWD)", { root = false } },
+            { "<leader>fb", require("telescope.builtin").buffers, desc = "Find open buffers" },
         }
     },
 }
